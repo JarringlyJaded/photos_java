@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER" spacing="10" fx:controller="photosfx.controller.UserHomeController">
+    <children>
+        <!-- Other UI components -->
+
+        <Label fx:id="welcomeLabel" />
+        <VBox fx:id="albumsContainer" spacing="5" />
+        <Button fx:id="createAlbumButton" text="Create Album" onAction="#createAlbumButtonClicked" />
+    <!-- Text field and buttons for adding album -->
+        <VBox fx:id="createAlbumBox" visible="false" spacing="5">
+            <Label text="Enter album name:" />
+            <TextField fx:id="albumNameField" promptText="Album Name" />
+            <Button text="Save" onAction="#saveAlbumButtonClicked" />
+            <Button text="Cancel" onAction="#cancelAlbumButtonClicked" />
+        </VBox>
+        <Button fx:id="searchButton" text="Search" onAction="#searchButtonClicked" />
+    </children>
+        <Button fx:id="logoutButton" text="Logout" onAction="#logoutButtonClicked" />
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+</VBox>
